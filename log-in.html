@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>eCommerce Website</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://w0.peakpx.com/wallpaper/25/68/HD-wallpaper-japan-minimalist.jpg');
+  background-size: cover;
+  
+}
+
+
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container input[type="submit"] {
+      width: 109%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+	h2{
+	font-family: "Comic Sans MS", cursive;
+    font-size: 35px;
+	color:white;
+	}
+	p {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 30px;
+  color:white;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to JAFUNSHOPPH!!!</h2>
+	  <p>
+	  Please log in to continue shopping.</p>
+    <form id="loginForm" action="redirect-page.html">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="submit" value="Log in">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Retrieve username and password values
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Perform authentication (e.g., check against a database)
+      // Replace the if condition with your own authentication logic
+      if (username === "Aryan" && password === "Aryan13") {
+        // Redirect to the eCommerce website
+        window.location.href = "redirect-page.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>
